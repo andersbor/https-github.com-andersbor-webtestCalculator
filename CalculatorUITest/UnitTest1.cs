@@ -9,7 +9,7 @@ namespace CalculatorUITest
     [TestClass]
     public class UnitTest1
     {
-        private static readonly string DriverDirectory = "C:\\seleniumDrivers2";
+        private static readonly string DriverDirectory = "C:\\webDrivers";
         private static IWebDriver _driver;
 
         [ClassInitialize]
@@ -29,7 +29,8 @@ namespace CalculatorUITest
         [TestMethod]
         public void TestMethod1()
         {
-            _driver.Navigate().GoToUrl("http://localhost:3000/");
+            //_driver.Navigate().GoToUrl("http://localhost:3000/");
+            _driver.Navigate().GoToUrl("file:///C:/andersb/javascript/calculator/index.htm");
             Assert.AreEqual("Calculator", _driver.Title);
 
             IWebElement inputElement1 = _driver.FindElement(By.Id("number1"));
